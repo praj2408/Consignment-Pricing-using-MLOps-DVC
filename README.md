@@ -9,3 +9,5 @@ The goal of this project is to create a predictive model that can help consignme
 Once the data is collected, the project will involve cleaning and preprocessing the data, selecting appropriate features, and training and testing various machine learning algorithms to determine which model performs the best. The project will also involve evaluating the accuracy and effectiveness of the final model, and potentially deploying it in a web application or other tool that can be used by consignment store owners and sellers.
 
 Overall, the Consignment-Price Prediction project has the potential to provide significant value to the consignment industry by helping sellers and store owners make more informed pricing decisions, leading to increased sales and revenue.
+## Dataset
+https://www.kaggle.com/datasets/divyeshardeshana/supply-chain-shipment-pricing-data
