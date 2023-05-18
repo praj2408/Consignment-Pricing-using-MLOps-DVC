@@ -13,6 +13,6 @@ Overall, the Consignment-Price Prediction project has the potential to provide s
 https://www.kaggle.com/datasets/divyeshardeshana/supply-chain-shipment-pricing-data
 
 ## Installation
-"""
-git clone https://github.com/praj2408/Consignment-Pricing-using-MLOps-DVC
-"""
+```bash
+  git clone https://github.com/praj2408/Consignment-Pricing-using-MLOps-DVC
+```
