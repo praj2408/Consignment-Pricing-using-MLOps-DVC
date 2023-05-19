@@ -35,3 +35,8 @@ Then, run the app.py file to start the Flask web application:
 ```
 python app.py
 ```
+## Model Information
+
+## Results and Analysis
+
+## Contributions
