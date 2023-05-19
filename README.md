@@ -40,3 +40,12 @@ python app.py
 ## Results and Analysis
 
 ## Contributions
+If you have any questions or comments about this project, feel free to contact the project maintainer at prajwalgbdr03@gmail.com.
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Run the Project
+- Clone the project
+- pip install -r requirements.txt
+- python app.py Enjoy the project in a local host
