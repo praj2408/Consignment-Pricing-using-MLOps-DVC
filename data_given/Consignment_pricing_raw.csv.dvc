@@ -1,0 +1,4 @@
+outs:
+- md5: 75ada24f6df3870fda5fde6a2e24cdad
+  size: 3785904
+  path: Consignment_pricing_raw.csv

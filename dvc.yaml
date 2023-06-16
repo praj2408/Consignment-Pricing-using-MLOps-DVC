@@ -1,0 +1,12 @@
+# different stages for the CICD pipeline
+
+stages:
+  
+  load_data:
+    cmd: python src/stage2_load_data.py --config=params.yaml
+    deps:
+    - src/stage1_Get_Data.py
+    - src/stage2_Load_Data.py
+    - data_given/Consignment_pricing_raw.csv
+    outs:
+    - data/raw/Consignment_pricing_raw.csv

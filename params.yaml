@@ -1,0 +1,12 @@
+base:
+  project: Consignment-Pricing-Using-MLops-DVC
+  random_state: 180
+  target_data: line_item_value
+
+
+data_source:
+  s3_source: data_given/Consignment_pricing_raw.csv
+
+
+load_data:
+  raw_dataset: data/raw/Consignment_pricing_raw.csv
