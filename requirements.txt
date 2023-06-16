@@ -1,9 +1,13 @@
-pandas
 numpy
-matplotlib
-seaborn
-scikit-learn
-catboost
-xgboost
+pandas
+flask
+scikit_learn
+dvc
+gunicorn
+argparse
+joblib
+pytest==7.1.2
 dill
--e .
+mlflow
+
+# -e .
