@@ -13,3 +13,5 @@ load_data:
 
 data:
   processed: data/processed/Consignment_pricing_processed.csv
+
+  
