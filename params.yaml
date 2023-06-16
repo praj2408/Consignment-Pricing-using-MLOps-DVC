@@ -10,3 +10,6 @@ data_source:
 
 load_data:
   raw_dataset: data/raw/Consignment_pricing_raw.csv
+
+data:
+  processed: data/processed/Consignment_pricing_processed.csv
