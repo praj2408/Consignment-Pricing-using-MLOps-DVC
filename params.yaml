@@ -14,4 +14,15 @@ load_data:
 data:
   processed: data/processed/Consignment_pricing_processed.csv
 
-  
+final_data:
+  transformed_data: transformed_data/Consignment_pricing_transformed.csv
+
+raw_data:
+  raw: consignment_data/Consignment_pricing_raw.csv
+
+columns:
+  select: ["pq_#",'po_/_so_#', 'asn/dn_#','country', 'fulfill_via', 'vendor_inco_term',
+       'sub_classification', 'unit_of_measure_(per_pack)',
+       'line_item_quantity', 'line_item_value', 'pack_price', 'unit_price',
+       'first_line_designation', 'freight_cost_(usd)', 'shipment_mode',
+        'line_item_insurance_(usd)', 'days_to_process']
