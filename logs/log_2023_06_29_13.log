@@ -1,0 +1,4 @@
+[2023-06-29 13:25:20,640] root - INFO - 'split_data' function started
+[2023-06-29 13:25:20,640] root - INFO - Reading all params from config_path
+[2023-06-29 13:25:20,647] root - INFO - parameters readed from config_path successfully!!!
+[2023-06-29 13:25:20,720] root - INFO - 'split_data' function successfully compiled

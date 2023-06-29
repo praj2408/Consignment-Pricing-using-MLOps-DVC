@@ -1,0 +1,14 @@
+[2023-06-29 12:35:45,206] root - INFO - 'data' FUNCTION STARTED
+[2023-06-29 12:35:45,206] root - INFO - 'feature_engineering' FUNCTION STARTED
+[2023-06-29 12:35:45,206] root - INFO - 'freight_cost_transform' FUNCTION STARTED
+[2023-06-29 12:35:45,206] root - INFO - 'remove_outliers' FUNCTION STARTED
+[2023-06-29 12:35:45,206] root - INFO - 'data_' FUNCTION STARTED
+[2023-06-29 12:35:45,206] root - INFO - Reading all params from config_path
+[2023-06-29 12:35:45,214] root - INFO - parameters readed from config_path successfully!!!
+[2023-06-29 12:35:45,254] root - INFO - Data loaded successfully
+[2023-06-29 12:35:45,263] root - INFO - removed outliers function compiled successfully
+[2023-06-29 12:35:45,270] root - INFO - freight_cost_transform function compiled successfully
+[2023-06-29 12:35:45,477] root - INFO - Exception occurred while compiling the codeColumns must be same length as key
+[2023-06-29 12:35:45,477] root - INFO - Failed to execute the code please check your code and run
+[2023-06-29 12:35:45,477] root - INFO - Exception occurred while compiling the codeError occurred python script name [D:\Projects\Consignment\src\stage4_feature_engineering.py] line number [108] error message [Columns must be same length as key].
+[2023-06-29 12:35:45,477] root - INFO - Failed to execute the code please check your code and run

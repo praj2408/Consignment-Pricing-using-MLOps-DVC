@@ -1,0 +1,8 @@
+[2023-06-16 17:54:22,394] root - INFO - Loading data from the source
+[2023-06-16 17:54:22,394] root - INFO - Reading all params from config_path
+[2023-06-16 17:54:22,395] root - INFO - parameters readed from config_path successfully!!!
+[2023-06-16 17:54:22,395] root - INFO - getting the data from the source
+[2023-06-16 17:54:22,395] root - INFO - Reading all params from config_path
+[2023-06-16 17:54:22,396] root - INFO - parameters readed from config_path successfully!!!
+[2023-06-16 17:54:22,457] root - INFO - Data Fetched from the source Successfully !!!
+[2023-06-16 17:54:22,592] root - INFO - Data Loaded from the source Successfully !!!

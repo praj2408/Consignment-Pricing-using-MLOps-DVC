@@ -1,0 +1,5 @@
+[2023-06-29 00:13:03,827] root - INFO - 'data' FUNCTION STARTED
+[2023-06-29 00:13:03,828] root - INFO - Reading all params from config_path
+[2023-06-29 00:13:03,828] root - INFO - Exception Occurred while reading parameters from config_path -->[Errno 2] No such file or directory: '/home/dataguy/Desktop/Consignment-Pricing-Using-Mlops-DVC-main/params.yaml'
+[2023-06-29 00:13:03,828] root - INFO - Exception occurred while compiling the code
+[2023-06-29 00:13:03,828] root - INFO - Failed to execute the code please check your code and run
