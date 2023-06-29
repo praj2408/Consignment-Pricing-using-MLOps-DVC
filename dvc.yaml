@@ -19,3 +19,12 @@ stages:
       - data/raw/Consignment_pricing_raw.csv
     outs:
       - data/processed/Consignment_pricing_processed.csv
+
+
+  feature_engineering:
+    cmd: python src/stage4_feature_engineering.py --config=params.yaml
+    deps:
+    - src/stage4_feature_engineering.py
+    - data/processed/Consignment_pricing_processed.csv
+    outs: 
+    - data/transformed_data/Consignment_pricing_transformed.csv

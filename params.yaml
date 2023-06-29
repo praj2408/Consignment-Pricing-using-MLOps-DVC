@@ -15,7 +15,7 @@ data:
   processed: data/processed/Consignment_pricing_processed.csv
 
 final_data:
-  transformed_data: transformed_data/Consignment_pricing_transformed.csv
+  transformed_data: data/transformed_data/Consignment_pricing_transformed.csv
 
 raw_data:
   raw: consignment_data/Consignment_pricing_raw.csv

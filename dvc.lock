@@ -23,9 +23,22 @@ stages:
       md5: fa00f21b7e9c8ea082e583f595566888
       size: 3804449
     - path: src/stage3_preprocessing.py
-      md5: 9b25ac0bd11327d19456f1b6fe935950
-      size: 7769
+      md5: 7a5a2a706df37e19aa1e60d38b76fa55
+      size: 8255
     outs:
     - path: data/processed/Consignment_pricing_processed.csv
-      md5: 56c2c68debc2665f29c0f0ee59f27b48
-      size: 1352324
+      md5: 765b09d99484cfb6e91ed4efbb9c82aa
+      size: 1238391
+  feature_engineering:
+    cmd: python src/stage4_feature_engineering.py --config=params.yaml
+    deps:
+    - path: data/processed/Consignment_pricing_processed.csv
+      md5: 765b09d99484cfb6e91ed4efbb9c82aa
+      size: 1238391
+    - path: src/stage4_feature_engineering.py
+      md5: 21a53f108dce802a53c61eea4fc97728
+      size: 6772
+    outs:
+    - path: data/transformed_data/Consignment_pricing_transformed.csv
+      md5: 29fa79ad617000295e6b2827f7d96f27
+      size: 642703
