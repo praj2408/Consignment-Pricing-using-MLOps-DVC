@@ -42,3 +42,19 @@ stages:
     - path: data/transformed_data/Consignment_pricing_transformed.csv
       md5: 29fa79ad617000295e6b2827f7d96f27
       size: 642703
+  split_data:
+    cmd: python src/stage5_split_data.py --config=params.yaml
+    deps:
+    - path: data/transformed_data/Consignment_pricing_transformed.csv
+      md5: 29fa79ad617000295e6b2827f7d96f27
+      size: 642703
+    - path: src/stage5_split_data.py
+      md5: 783303f8d9663425fcaa517029ef955f
+      size: 2296
+    outs:
+    - path: data/split_data/Consignment_pricing_test.csv
+      md5: 23143bcb05278b55bf259435ff9e36e9
+      size: 119384
+    - path: data/split_data/Consignment_pricing_train.csv
+      md5: 25c5c1523f034247933a130a9a9757c1
+      size: 475987

@@ -28,3 +28,13 @@ stages:
     - data/processed/Consignment_pricing_processed.csv
     outs: 
     - data/transformed_data/Consignment_pricing_transformed.csv
+
+
+  split_data:
+    cmd: python src/stage5_split_data.py --config=params.yaml
+    deps:
+    - src/stage5_split_data.py
+    - data/transformed_data/Consignment_pricing_transformed.csv
+    outs:
+    - data/split_data/Consignment_pricing_train.csv
+    - data/split_data/Consignment_pricing_test.csv
