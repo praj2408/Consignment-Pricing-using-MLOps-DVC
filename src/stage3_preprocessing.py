@@ -110,6 +110,12 @@ class Preprocessing:
             logging.info(
                 "Failed to execute the code please check your code and run")
             raise AppException(e, sys) from e
+        
+    def reorder(self, data):
+        data=data.split("-")
+        data=data[0]
+        return data   
+     
 
     def trans_freight_cost(self, x):
         if x.find("See") != -1:
@@ -123,6 +129,7 @@ class Preprocessing:
         try:
             logging.info("'transform_freight_cost_columns' FUNCTION STARTED")
             self.data = self.transform_dates_columns(config_path)
+            self.data = self.reorder_columns(config_path)
             self.data["freight_cost_(usd)"] = self.data["freight_cost_(usd)"].apply(
                 self.trans_freight_cost)
 
@@ -149,12 +156,28 @@ class Preprocessing:
             logging.info(
                 "Failed to execute the code please check your code and run")
             raise AppException(e, sys) from e
+        
+        
+
+        
+        
+        
+        
+        
+        
+        
+        
 
     def data_(self, config_path):
         try:
             logging.info("'data' FUNCTION STARTED")
             self.config = self.get_data.read_params(config_path)
             self.data = self.drop_unnecessary_columns(config_path)
+            
+            self.data["po_/_so_#"] = self.data["po_/_so_#"].apply(self.reorder)
+            self.data["asn/dn_#"] = self.data["asn/dn_#"].apply(self.reorder)
+            
+            
             self.data.to_csv(self.config["data1"]["processed"])
             logging.info("data function compiled successfully")
         except Exception as e:
