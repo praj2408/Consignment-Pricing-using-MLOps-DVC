@@ -29,7 +29,13 @@ The following diagram shows the implementation of the ML pipeline using CI/CD, w
 ![](https://github.com/praj2408/ETE-Protect/blob/main/images/cicd%20pipeline%20automation.jpg)
 
 ## Model information
+Experiments:
 
+         Model Name              R2 score 
+      1. Linear Regression         92.35            
+      2. Lasso Regression          91.41
+      3. DecisionTree Regression   95.71
+      
 ## Results and analysis
 
 After training the model, we achieved an R-squared value of 0.95 (95% accuracy) on the test data, indicating a high level of predictive power.
