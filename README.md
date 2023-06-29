@@ -94,9 +94,6 @@ After writing code, run pytest -v and see all test cases done
 ### Web deployment
 Flask for backend and HTML, CSS, for frontend
 all the code are given in app.py
-## Model Information
-
-## Results and Analysis
 
 ## Contributions
 If you have any questions or comments about this project, feel free to contact the project maintainer at prajwalgbdr03@gmail.com.
