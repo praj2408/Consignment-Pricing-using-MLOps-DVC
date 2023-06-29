@@ -26,6 +26,7 @@ class Preprocessing:
             self.data.columns = self.data.columns.str.replace(" ", "_")
             logging.info("'column_imputation' FUNCTION COMPILED SUCCESSFULLY")
             return self.data
+        
         except Exception as e:
             logging.info(
                 f"Exception occurred while compiling the code {str(e)}")
@@ -88,7 +89,6 @@ class Preprocessing:
 
     def transform_dates_columns(self, config_path):
         try:
-
             logging.info("'transform_dates_columns' FUNCTION STARTED")
             self.data = self.transform_pq_first_sent_to_client_date_columns(
                 config_path)
@@ -96,8 +96,10 @@ class Preprocessing:
                 self.transform_dates)
             self.data["delivered_to_client_date"] = self.data["delivered_to_client_date"].apply(
                 self.transform_dates)
-            self.data["days_to_process"] = self.data["delivery_recorded_date"] - \
-                self.data["pq_first_sent_to_client_date"]
+            self.data["pq_first_sent_to_client_date"] = pd.to_datetime(self.data["pq_first_sent_to_client_date"])
+            
+            self.data["days_to_process"] = self.data["delivery_recorded_date"]-self.data["pq_first_sent_to_client_date"]
+            self.data["days_to_process"] = pd.to_timedelta(self.data["days_to_process"])
             self.data['days_to_process'] = self.data['days_to_process'].dt.days.astype(
                 'int64')
             logging.info(
@@ -131,9 +133,6 @@ class Preprocessing:
                 "transform_freight_cost_columns function compiled successfully")
             return self.data
         except Exception as e:
-            logging.info("Exception occurred while compiling the code", str(e))
-            logging.info(
-                "Failed to execute the code please check your code and run")
             raise AppException(e, sys) from e
 
     def drop_unnecessary_columns(self, config_path):
@@ -147,7 +146,7 @@ class Preprocessing:
             return self.data
         except Exception as e:
             logging.info("Exception occurred while compiling the code", str(e))
-            self.logger.log(
+            logging.info(
                 "Failed to execute the code please check your code and run")
             raise AppException(e, sys) from e
 

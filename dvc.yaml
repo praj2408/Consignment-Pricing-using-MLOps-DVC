@@ -10,3 +10,12 @@ stages:
     - data_given/Consignment_pricing_raw.csv
     outs:
     - data/raw/Consignment_pricing_raw.csv
+
+
+  preprocessing:
+    cmd: python src/stage3_preprocessing.py --config=params.yaml
+    deps:
+      - src/stage3_preprocessing.py
+      - data/raw/Consignment_pricing_raw.csv
+    outs:
+      - data/processed/Consignment_pricing_processed.csv

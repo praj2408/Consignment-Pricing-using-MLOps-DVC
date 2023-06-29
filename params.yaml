@@ -26,3 +26,42 @@ columns:
        'line_item_quantity', 'line_item_value', 'pack_price', 'unit_price',
        'first_line_designation', 'freight_cost_(usd)', 'shipment_mode',
         'line_item_insurance_(usd)', 'days_to_process']
+
+
+split_data:
+  train_path: data/split_data/Consignment_pricing_train.csv
+  test_path: data/split_data/Consignment_pricing_test.csv
+  split_ratio: 0.20
+
+model_dirs: saved_models
+
+estimators: 
+  RandomForestRegressor:
+    params:
+      criterion: mae
+      max_deapth: 10
+      min_sample_leaf: 2
+      min_sample_split: 8
+      n_estimators: 80
+      oob_score: True
+
+webapp_model_dir: prediction_service/model/model_rf.pkl
+
+data1:
+  training_data: data/main_data/train_data.csv
+  test_data:  data/main_data/test_data.csv
+  processed: data/processed/Consignment_pricing_processed.csv
+
+RandomizedSearchCV:
+  n_iter: 3
+  scoring: r2
+  verbose: 5
+  cv: 10
+  n_jobs: -1
+  return_train_score:  True
+  params:
+    n_estimators: [5,10,20,40,80]
+    criterion: ['mse','mae']
+    max_depth: [2,5,10]
+    min_samples_split : [2,4,8,12]
+    min_samples_leaf: [2,4,8,10]

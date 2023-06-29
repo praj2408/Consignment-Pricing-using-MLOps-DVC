@@ -25,7 +25,7 @@ class LoadData:
             self.config = self.getdata.read_params(config_path)
             self.data = self.getdata.get_data(config_path)
             self.raw_data_path = self.config['load_data']['raw_dataset']
-            self.data.to_csv(self.raw_data_path, sep=',', encoding='utf-8')
+            self.data.to_csv(self.raw_data_path, sep=',', encoding='utf-8', index=False)
             logging.info(f"Data Loaded from the source Successfully !!!")
         
         except Exception as e:
