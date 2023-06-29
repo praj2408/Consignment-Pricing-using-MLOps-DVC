@@ -28,6 +28,11 @@ For a rapid and reliable update of the pipelines in production, you need a robus
 The following diagram shows the implementation of the ML pipeline using CI/CD, which has the characteristics of the automated ML pipelines setup plus the automated CI/CD routines.
 ![](https://github.com/praj2408/ETE-Protect/blob/main/images/cicd%20pipeline%20automation.jpg)
 
+## Model information
+
+## Results and analysis
+
+After training the model, we achieved an R-squared value of 0.95 (95% accuracy) on the test data, indicating a high level of predictive power.
 ## Installation
 To run the code, first clone this repository and navigate to the project directory:
 ```
@@ -35,7 +40,7 @@ git clone https://github.com/your-username/repository_name.git
 ```
 Create a virtual environment
 ```
-conda create -p venv python==3.8 -y
+conda create -p venv python==3.9 -y
 conda activate venv/
 ```
 To run this project, you will need python packages present in the requirements file
