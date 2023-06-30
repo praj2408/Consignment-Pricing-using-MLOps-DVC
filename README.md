@@ -14,7 +14,8 @@ Overall, the Consignment-Price Prediction project has the potential to provide s
 https://
 
 ## Dataset
-https://www.kaggle.com/datasets/divyeshardeshana/supply-chain-shipment-pricing-data
+The dataset is provided by Ineuron: 
+[supply-chain-shipment-pricing-data](https://www.kaggle.com/datasets/divyeshardeshana/supply-chain-shipment-pricing-data)
 
 ## MLOps Level 1: ML Pipeline Automation Architecture
 The goal of level 1 is to perform continuous training of the model by automating the ML pipeline; this lets you achieve continuous delivery of model prediction service. To automate the process of using new data to retrain models in production, you need to introduce automated data and model validation steps to the pipeline, as well as pipeline triggers and metadata management.
