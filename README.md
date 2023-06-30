@@ -1,4 +1,4 @@
-# Ineuron Project Ongoing
+# Ineuron Project
 
 # Consignment-Pricing-Using-Mlops-DVC
 ## Project Overview
