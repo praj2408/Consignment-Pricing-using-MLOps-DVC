@@ -31,7 +31,7 @@ The following diagram shows the implementation of the ML pipeline using CI/CD, w
 Experiments:
 
          Model Name              R2 score 
-      1. Linear Regression         92.35            
+      1. Linear Regression         92.35        
       2. Lasso Regression          91.41
       3. DecisionTree Regression   95.71
       
@@ -91,7 +91,7 @@ while testing your file names must contains the word test in it. For ex: xyztest
 After writing code, run pytest -v and see all test cases done
 
 ### Web deployment
-Flask for backend and HTML, CSS, for frontend
+Streamlit is used for front-end
 all the code are given in app.py
 
 ## Contributions
