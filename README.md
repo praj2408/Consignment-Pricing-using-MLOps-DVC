@@ -11,6 +11,24 @@ Overall, the Consignment-Price Prediction project has the potential to provide s
 ## Website link
 https://
 
+## File structure 
+
+    .
+    ├── app_exception           # Custom exception
+    ├── application_logging     # custom logger
+    ├── data_given              # Given Data
+    ├── data                    # raw / processed/ transformed data
+    ├── saved_models            # regression model
+    ├── report                  # model parameter and pipeline reports.
+    ├── notebook                # jupyter notebooks
+    ├── src                     # Source files for project implementation
+    ├── webapp                  # ml web application
+    ├── dvc.yaml                # data version control pipeline.
+    ├── app.py                  # Flask backend
+    ├── param.yaml              # parameters
+    ├── requirements.txt
+    └── README.md
+
 ## Dataset
 The dataset is provided by Ineuron: 
 [supply-chain-shipment-pricing-data](https://www.kaggle.com/datasets/divyeshardeshana/supply-chain-shipment-pricing-data)
