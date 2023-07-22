@@ -1,18 +1,17 @@
 # Consignment-Pricing-Using-MLOps-DVC 
 ## Project Overview
-The Consignment-Price Prediction project aims to develop a machine learning model that can accurately predict the price of consignment items based on various features and variables. Consignment is a business model in which an individual or business agrees to sell someone else's items on their behalf, typically taking a commission on the final sale price.
+The Consignment-Price Prediction project aims to develop a machine-learning model that can accurately predict the price of consignment items based on various features and variables. Consignment is a business model in which an individual or business agrees to sell someone else's items on their behalf, typically taking a commission on the final sale price.
 
-The goal of this project is to create a predictive model that can help consignment store owners and sellers better understand how to price their items, leading to increased sales and profits. To accomplish this, the project will involve collecting and analyzing data on various features that could impact the sale price of consignment items, such as the item's condition, brand, and rarity, as well as market trends and buyer behavior.
+The goal of this project is to create a predictive model that can help consignment store owners and sellers better understand how to price their items, leading to increased sales and profits. To accomplish this, the project will involve collecting and analyzing data on various features that could impact the sale price of consignment items, such as the item's condition, brand, and rarity, as well as market trends and buyer behaviour.
 
 Once the data is collected, the project will involve cleaning and preprocessing the data, selecting appropriate features, and training and testing various machine learning algorithms to determine which model performs the best. The project will also involve evaluating the accuracy and effectiveness of the final model, and potentially deploying it in a web application or other tool that can be used by consignment store owners and sellers.
 
 Overall, the Consignment-Price Prediction project has the potential to provide significant value to the consignment industry by helping sellers and store owners make more informed pricing decisions, leading to increased sales and revenue.
 
-## Website link
-https://
+## Website
 
-## File structure 
 
+## File Structure 
     .
     ├── app_exception           # Custom exception
     ├── application_logging     # custom logger
@@ -66,7 +65,7 @@ Create a virtual environment
 conda create -p venv python==3.9 -y
 conda activate venv/
 ```
-To run this project, you will need python packages present in the requirements file
+To run this project, you will need Python packages present in the requirements file
 ```
 pip install -r requirements.txt
 ```
@@ -75,7 +74,7 @@ Then, run the `app.py` file to start the Flask web application:
 ```
 python app.py
 ```
-### Tox Command
+### Tox Commands
 Tox aims to automate and standardize testing in Python. It is part of a larger vision of easing the packaging, testing and release process of Python
 ```bash
 [tox]
@@ -84,7 +83,7 @@ Tox aims to automate and standardize testing in Python. It is part of a larger v
    deps=pytest
    command=pytest -v
 ```
-### For rebuilding
+### For Rebuilding
 ``` tox -r ```
 
 ### Pytest
@@ -97,23 +96,23 @@ Used for testing purposes. You can use pip install pytest and pip install tox
 ### Package building
 ``` python setup.py sdist bdist_wheel```
 
-### Hands on commands for testing
+### Hands-on commands for testing
 ```dvc repro```
 ```dvc metrics show```
 
 Use logging libraries for making logs
 
 ### Testing
-while testing your file names must contains the word test in it. For ex: xyztest.py or configtest.py
+while testing your file names must contain the word "test" in it. For ex: xyztest.py or configtest.py
 
 After writing code, run pytest -v and see all test cases done
 
 ### Web deployment
-Streamlit is used for front-end
+Streamlit is used for front-end<br>
 all the code are given in app.py
 
 ## Contributions
-If you have any questions or comments about this project, feel free to contact the project maintainer at prajwalgbdr03@gmail.com.
+If you have any questions or suggestions regarding the project, please feel free to contact the project maintainer at [gmail](https://mail.google.com/mail/?view=cm&tf=0&to=prajwalgbdr03@gmail.com)
 
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
