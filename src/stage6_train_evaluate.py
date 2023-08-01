@@ -15,7 +15,6 @@ import numpy as np
 import sys
 import mlflow
 from datetime import datetime
-#sys.path.append("/home/dataguy/Desktop/Consignment-Pricing-Using-Mlops-DVC-main")
 
 MODEL_DIR = "saved_models"
 MODEL_PATH = os.path.join(os.getcwd(), MODEL_DIR)
@@ -44,12 +43,15 @@ class TrainEvaluate:
             self.train_data = self.config["split_data"]["train_path"]
             self.model_dir = self.config["model_dirs"]
             self.target_col = self.config["base"]["target_data"]
+            
             logging.info(
                 "train data read successfully-->path: "+self.train_data)
             self.train = pd.read_csv(self.train_data, sep=",")
             logging.info("train data read successfully")
             self.test = pd.read_csv(self.test_data, sep=",")
             logging.info("test data read successfully")
+            
+            
             logging.info("model training started")
             self.criterion = self.config["estimators"]["RandomForestRegressor"]["params"]["criterion"]
             self.max_deapth = self.config["estimators"]["RandomForestRegressor"]["params"]["max_deapth"]
@@ -80,6 +82,7 @@ class TrainEvaluate:
                                          return_train_score=self.config["RandomizedSearchCV"]["return_train_score"])
                 RCV.fit(self.x_train, self.y_train)
                 rf.fit(self.x_train, self.y_train)
+               
                 # Feature importances
                 self.rf1_feature_imp = pd.DataFrame(
                     rf.feature_importances_, index=self.x_train.columns, columns=['Feature_importance'])
@@ -94,26 +97,6 @@ class TrainEvaluate:
                 )]
                 self.features_by_rf = self.rf1_feature_imp.index
 
-                self.x_train_rf = self.x_train[self.features_by_rf]
-                self.x_test_rf = self.x_test[self.features_by_rf]
-
-                self.x_train.to_csv(self.config["data1"]["training_data"])
-                self.x_test.to_csv(self.config["data1"]["test_data"])
-
-                rf2 = RandomForestRegressor()
-                RCV = RandomizedSearchCV(estimator=rf2,
-                                         param_distributions=self.config["RandomizedSearchCV"]["params"],
-                                         n_iter=self.config["RandomizedSearchCV"]["n_iter"],
-                                         scoring=self.config["RandomizedSearchCV"]["scoring"],
-                                         cv=self.config["RandomizedSearchCV"]["cv"],
-                                         verbose=self.config["RandomizedSearchCV"]["verbose"],
-                                         random_state=42,
-                                         n_jobs=self.config["RandomizedSearchCV"]["n_jobs"],
-                                         return_train_score=self.config["RandomizedSearchCV"]["return_train_score"])
-                RCV.fit(self.x_train, self.y_train)
-
-                rf2 = RCV.best_estimator_
-                rf2.fit(self.x_train, self.y_train)
                 y_pred = rf.predict(self.x_test)
                 logging.info(
                     "Model Trained on RandomizedSearchCV successfully")
