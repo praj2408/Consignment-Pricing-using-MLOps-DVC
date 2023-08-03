@@ -105,11 +105,11 @@ Use logging libraries for making logs
 ### Testing
 while testing your file names must contain the word "test" in it. For ex: xyztest.py or configtest.py
 
-After writing code, run pytest -v and see all test cases done
+After writing the code, run pytest -v and see all test cases done
 
-### Web deployment
-Streamlit is used for front-end<br>
-all the code are given in app.py
+### Web Deployment
+Html, Css is used for front-end<br>
+all the codes are given in app.py
 
 ## Contributions
 If you have any questions or suggestions regarding the project, please feel free to contact the project maintainer at [gmail](https://mail.google.com/mail/?view=cm&tf=0&to=prajwalgbdr03@gmail.com)
