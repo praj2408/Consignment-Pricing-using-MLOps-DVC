@@ -70,9 +70,3 @@ reports:
   scores: reports/scores.json
   params: reports/params.json
 
-mlflow_config_dir:
-  artifacts_dir: artifacts
-  experiment_name: RandomForestRegression
-  run_name: Consignment_Pricing_Mlops
-  registered_model_name: RandomForestConsignmentModel
-  remote_server_uri: http://127.0.0.1:1234

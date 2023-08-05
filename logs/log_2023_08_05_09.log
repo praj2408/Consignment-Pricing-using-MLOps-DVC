@@ -1,0 +1,9 @@
+[2023-08-05 09:43:56,097] root - INFO - 'train_evaluate' function started
+[2023-08-05 09:43:56,098] root - INFO - Reading all params from config_path
+[2023-08-05 09:43:56,108] root - INFO - parameters readed from config_path successfully!!!
+[2023-08-05 09:43:56,108] root - INFO - train data read successfully-->path: data/split_data/Consignment_pricing_train.csv
+[2023-08-05 09:43:56,130] root - INFO - train data read successfully
+[2023-08-05 09:43:56,138] root - INFO - test data read successfully
+[2023-08-05 09:43:56,138] root - INFO - model training started
+[2023-08-05 09:44:01,908] root - INFO - Model Trained on RandomizedSearchCV successfully
+[2023-08-05 09:44:02,296] root - INFO - scores written to file
