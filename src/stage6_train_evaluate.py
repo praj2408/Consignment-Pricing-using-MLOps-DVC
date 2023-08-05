@@ -76,9 +76,11 @@ class TrainEvaluate:
                                         random_state=42,
                                         n_jobs=self.config["RandomizedSearchCV"]["n_jobs"],
                                         return_train_score=self.config["RandomizedSearchCV"]["return_train_score"])
-            RCV.fit(self.x_train, self.y_train)
+            rf1 = RCV.fit(self.x_train, self.y_train)
             
             print(RCV.best_score_)
+            
+            
                 # Feature importances
             # self.rf_feature_imp = pd.DataFrame(
             #     rf.feature_importances_, index=self.x_train.columns, columns=['Feature_importance'])
@@ -93,7 +95,7 @@ class TrainEvaluate:
             # self.rf1_feature_imp = self.rf1_feature_imp[self.rf1_feature_imp['Feature_importance'].notna()]
             # self.features_by_rf = self.rf1_feature_imp.index
 
-            y_pred = rf.predict(self.x_test)
+            y_pred = rf1.predict(self.x_test)
             logging.info("Model Trained on RandomizedSearchCV successfully")
             
             (r2, mse, rmse) = self.evaluation_metrics(self.y_test, y_pred)
@@ -105,7 +107,7 @@ class TrainEvaluate:
             os.makedirs(self.model_dir, exist_ok=True)
             os.makedirs(MAIN_PATH,exist_ok=True)
             self.model_path = os.path.join(MAIN_PATH,self.filename)
-            joblib.dump(rf, self.model_path)
+            joblib.dump(rf1, self.model_path)
 
             scores_file = self.config["reports"]["scores"]
             params_file = self.config["reports"]["params"]
