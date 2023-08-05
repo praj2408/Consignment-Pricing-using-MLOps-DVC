@@ -1,0 +1,15 @@
+{
+    "best params": {
+        "n_estimators": 5,
+        "min_samples_split": 12,
+        "min_samples_leaf": 4,
+        "max_depth": 10,
+        "criterion": "friedman_mse"
+    },
+    "criterion": "mae",
+    "n_estimators": 80,
+    "max_deapth": 10,
+    "min_sample_leaf": 2,
+    "min_sample_split": 8,
+    "oob_score": true
+}

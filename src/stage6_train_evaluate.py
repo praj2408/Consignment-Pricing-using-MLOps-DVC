@@ -64,18 +64,21 @@ class TrainEvaluate:
 
 
             rf = RandomForestRegressor()
-            # RCV = RandomizedSearchCV(estimator=rf,
-            #                             param_distributions=self.config["RandomizedSearchCV"]["params"],
-            #                             n_iter=self.config["RandomizedSearchCV"]["n_iter"],
-            #                             scoring=self.config["RandomizedSearchCV"]["scoring"],
-            #                             cv=self.config["RandomizedSearchCV"]["cv"],
-            #                             verbose=self.config["RandomizedSearchCV"]["verbose"],
-            #                             random_state=42,
-            #                             n_jobs=self.config["RandomizedSearchCV"]["n_jobs"],
-            #                             return_train_score=self.config["RandomizedSearchCV"]["return_train_score"])
-            # RCV.fit(self.x_train, self.y_train)
+            
             rf.fit(self.x_train, self.y_train)
-               
+            
+            RCV = RandomizedSearchCV(estimator=rf,
+                                        param_distributions=self.config["RandomizedSearchCV"]["params"],
+                                        n_iter=self.config["RandomizedSearchCV"]["n_iter"],
+                                        scoring=self.config["RandomizedSearchCV"]["scoring"],
+                                        cv=self.config["RandomizedSearchCV"]["cv"],
+                                        verbose=self.config["RandomizedSearchCV"]["verbose"],
+                                        random_state=42,
+                                        n_jobs=self.config["RandomizedSearchCV"]["n_jobs"],
+                                        return_train_score=self.config["RandomizedSearchCV"]["return_train_score"])
+            RCV.fit(self.x_train, self.y_train)
+            
+            print(RCV.best_score_)
                 # Feature importances
             # self.rf_feature_imp = pd.DataFrame(
             #     rf.feature_importances_, index=self.x_train.columns, columns=['Feature_importance'])
@@ -118,17 +121,17 @@ class TrainEvaluate:
                 json.dump(scores, f, indent=4)
             logging.info("scores written to file")
             
-            # with open(params_file, "w") as f:
-            #     params = {
-            #         "best params": RCV.best_params_,
-            #         "criterion": self.criterion,
-            #         "n_estimators": self.n_estimators,
-            #         "max_deapth": self.max_deapth,
-            #         "min_sample_leaf": self.min_sample_leaf,
-            #         "min_sample_split": self.min_sample_split,
-            #         "oob_score": self.oob_score
-            #     }
-            #     json.dump(params, f, indent=4)
+            with open(params_file, "w") as f:
+                params = {
+                    "best params": RCV.best_params_,
+                    "criterion": self.criterion,
+                    "n_estimators": self.n_estimators,
+                    "max_deapth": self.max_deapth,
+                    "min_sample_leaf": self.min_sample_leaf,
+                    "min_sample_split": self.min_sample_split,
+                    "oob_score": self.oob_score
+                }
+                json.dump(params, f, indent=4)
 
         except Exception as e:
             logging.info("Exception occured in 'train_evaluate' function"+str(e))

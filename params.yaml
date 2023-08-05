@@ -61,7 +61,7 @@ RandomizedSearchCV:
   return_train_score:  True
   params:
     n_estimators: [5,10,20,40,80]
-    criterion: ['mse','mae']
+    criterion: ['absolute_error', 'friedman_mse', 'poisson', 'squared_error']
     max_depth: [2,5,10]
     min_samples_split : [2,4,8,12]
     min_samples_leaf: [2,4,8,10]
