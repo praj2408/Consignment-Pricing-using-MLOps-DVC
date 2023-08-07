@@ -9,7 +9,7 @@ Once the data is collected, the project will involve cleaning and preprocessing 
 Overall, the Consignment-Price Prediction project has the potential to provide significant value to the consignment industry by helping sellers and store owners make more informed pricing decisions, leading to increased sales and revenue.
 
 ## Website
-
+...
 
 ## File Structure 
     .
