@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consignment Pricing Prediction</title>
+    <link rel="stylesheet" href="/static/css/main.css">
+</head>
+<body>
+    <h1>Consignment Premium Prediction</h1>
+
+
+    <form action="{{ url_for('predict_datapoint')}}" method="post">
+
+        <label for="po_so">PO / SO Number:</label>
+        <select name="po_so" id="po_so" class="custom-style" aria-placeholder="Choose PO or SO">
+                  <option value="0">SCMS</option>
+                  <option value="1">SO</option>
+                </select><br>
+
+
+        <label for="asn_dn">ASN / DN Number:</label>
+        <select name="asn_dn" id="asn_dn" class="custom-style" >
+            <option value="0">Advanced Shipping Notice</option>
+            <option value="1">Delivary Notice</option>
+          </select><br>
+
+        <label for="country">Country:</label>
+        <select name="country" id="country" class="custom-style" >
+            <option value="1402">South Africa</option>
+            <option value="1076">Nigeria</option>
+            <option value="1027">Côte d'Ivoire</option>
+            <option value="737">Uganda</option>
+            <option value="673">Vietnam</option>
+            <option value="615">Zambia</option>
+            <option value="600">Haiti</option>
+            <option value="565">Mozambique</option>
+            <option value="525">Zimbabwe</option>
+            <option value="487">Tanzania</option>
+            <option value="403">Rwanda</option>
+            <option value="326">Congo, DRC</option>
+            <option value="237">Guyana</option>
+            <option value="172">Ethiopia</option>
+            <option value="164">South Sudan</option>
+            <option value="108">Kenya</option>
+            <option value="97">Burundi</option>
+            <option value="94">Namibia</option>
+            <option value="67">Cameroon</option>
+            <option value="51">Dominican Republic</option>
+            <option value="48">Ghana</option>
+            <option value="46">Sudan</option>
+            <option value="44">Botswana</option>
+            <option value="34">Swaziland</option>
+            <option value="15">Pakistan</option>
+            <option value="13">Benin</option>
+            <option value="12">Malawi</option>
+            <option value="12">Mali</option>
+            <option value="12">Guatemala</option>
+            <option value="8">Libya</option>
+            <option value="7">Angola</option>
+            <option value="6">Liberia</option>
+            <option value="4">Sierra Leone</option>
+            <option value="3">Togo</option>
+            <option value="3">Senegal</option>
+            <option value="2">Kyrgyzstan</option>
+            <option value="2">Burkina Faso</option>
+            <option value="2">Lesotho</option>
+            <option value="1">Afghanistan</option>
+            <option value="1">Guinea</option>
+            <option value="1">Belize</option>
+          </select><br>
+
+        <label for="fulfill_via">Fulfill Via:</label>
+        <select name="fulfill_via" id="fulfill_via" class="custom-style" >
+            <option value="0">Direct Drop</option>
+            <option value="1">From RDC</option>
+          </select><br>
+
+        <label for="vendor_inco_term">Vender INCO Term:</label>
+        <select name="vendor_inco_term" id="vendor_inco_term" class="custom-style" >
+            <option value="4">N/A - From RDC</option>
+            <option value="2">EXW</option>
+            <option value="1">DDP</option>
+            <option value="3">FCA</option>
+            <option value="0">CIP</option>
+            <option value="5">Others</option>
+        </select><br>
+
+
+        <label for="sub_classification">Sub Classification:</label>
+        <select name="sub_classification" id="sub_classification" class="custom-style" >
+            <option value="1">Adult</option>
+            <option value="5">Pediatric</option>
+            <option value="2">HIV test</option>
+            <option value="3">HIV test-Ancillary</option>
+            <option value="4">Malaria</option>
+            <option value="0">ACT</option>
+        </select><br>
+
+
+        <label for="first_line_designation">First Line Designation:</label>
+        <select name="first_line_designation" id="first_line_designation" class="custom-style" >
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select><br>
+
+        <label for="shipment_mode">Shipment Mode:</label>
+        <select name="shipment_mode" id="shipment_mode" class="custom-style" >
+            <option value="1">Air</option>
+            <option value="3">Truck</option>
+            <option value="1">Air Charter</option>
+            <option value="2">Ocean</option>
+        </select><br>
+
+
+
+        <label for="unit_of_measure_(per_pack)">Unit of Measure (Per Pack):</label>
+        <input type="number" name="unit_of_measure_(per_pack)" id="unit_of_measure_(per_pack)" required><br>
+
+
+        <label for="line_item_quantity">Line Item Quantity:</label>
+        <input type="number" name="line_item_quantity" id="line_item_quantity" required><br>
+
+        <label for="line_item_insurance_(usd)">Line Item Insurance (USD):</label>
+        <input type="number" name="line_item_insurance_(usd)" id="line_item_insurance_(usd)" required><br>
+
+        <label for="pack_price">Pack Price:</label>
+        <input type="number" name="pack_price" id="pack_price" required><br>
+
+
+        <label for="unit_price">Unit Price:</label>
+        <input type="number" name="unit_price" id="unit_price" required><br>
+
+       
+        <label for="freight_cost_(usd)">Freight Cost (USD):</label>
+        <input type="number" name="freight_cost_(usd)" id="freight_cost_(usd)" required><br>
+
+ 
+        <label for="days_to_process">Days to Process:</label>
+        <input type="number" name="days_to_process" id="days_to_process" required><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    <h2>
+        THE  prediction is {{response}}
+     </h2>
+    
+</body>
+</html>
