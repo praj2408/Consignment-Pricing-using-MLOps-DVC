@@ -134,7 +134,7 @@ class FeatureEngineering:
             self.finaldata = self.feature_engineering(config_path)
             self.config = self.get_data.read_params(config_path)
             self.data.drop("Unnamed: 0", axis=1, inplace=True)
-            self.data.to_csv(self.config["final_data"]["transformed_data"])
+            self.data.to_csv(self.config["final_data"]["transformed_data"], index=False)
             logging.info( "Final Data for prediction successfully created")
         except Exception as e:
             logging.info(
