@@ -30,7 +30,7 @@ Overall, the Consignment-Price Prediction project has the potential to provide s
     └── README.md
 
 ## Dataset
-Ineuron provides the dataset: 
+The dataset is provided by iNeuron.ai: 
 [supply-chain-shipment-pricing-data](https://www.kaggle.com/datasets/divyeshardeshana/supply-chain-shipment-pricing-data)
 
 ## MLOps Level 1: ML Pipeline Automation Architecture
