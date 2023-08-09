@@ -2,8 +2,12 @@ import os
 dirs=[
     os.path.join("data","raw"),
     os.path.join("data","processed"),
+    os.path.join("data","split")
     os.path.join("data","transformed_data"),
     "notebooks",
+    "src",
+    "webapp",
+    "tests"
     
     
     "saved_models"
@@ -17,7 +21,7 @@ for dir_ in dirs:
 # files=[
 #     "dvc.yaml",
 #     "params.yaml",
-#     ".gitingnore",   
+#     ".gitingnore",
 # ]
 
 # for file_ in files:
