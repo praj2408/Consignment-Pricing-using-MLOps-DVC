@@ -24,6 +24,7 @@ class Preprocessing:
             self.data = self.get_data.get_data(config_path)
             self.data.columns = self.data.columns.str.lower()
             self.data.columns = self.data.columns.str.replace(" ", "_")
+            #self.data.columns = self.data.columns.str.replace("#", "")
             logging.info("'column_imputation' FUNCTION COMPILED SUCCESSFULLY")
             return self.data
         
