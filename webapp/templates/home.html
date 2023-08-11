@@ -10,7 +10,7 @@
     <h1>Consignment Premium Prediction</h1>
 
 
-    <form action="{{ url_for('predict_datapoint')}}" method="post">
+    <form method="post">
 
         <label for="po_so">PO / SO Number:</label>
         <select name="po_so" id="po_so" class="custom-style" aria-placeholder="Choose PO or SO">
@@ -22,7 +22,7 @@
         <label for="asn_dn">ASN / DN Number:</label>
         <select name="asn_dn" id="asn_dn" class="custom-style" >
             <option value="0">Advanced Shipping Notice</option>
-            <option value="1">Delivary Notice</option>
+            <option value="1">Delivery Notice</option>
           </select><br>
 
         <label for="country">Country:</label>
