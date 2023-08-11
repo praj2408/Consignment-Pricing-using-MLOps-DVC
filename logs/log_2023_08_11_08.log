@@ -1,0 +1,11 @@
+[2023-08-11 08:53:44,882] werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2023-08-11 08:53:44,882] werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[2023-08-11 08:53:48,065] werkzeug - INFO - 127.0.0.1 - - [11/Aug/2023 08:53:48] "GET /predict HTTP/1.1" 200 -
+[2023-08-11 08:53:48,491] werkzeug - INFO - 127.0.0.1 - - [11/Aug/2023 08:53:48] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+[2023-08-11 08:53:49,381] werkzeug - INFO - 127.0.0.1 - - [11/Aug/2023 08:53:49] "GET /predict HTTP/1.1" 200 -
+[2023-08-11 08:53:49,422] werkzeug - INFO - 127.0.0.1 - - [11/Aug/2023 08:53:49] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+[2023-08-11 08:54:06,923] werkzeug - INFO - 127.0.0.1 - - [11/Aug/2023 08:54:06] "[31m[1mPOST /predict HTTP/1.1[0m" 405 -
+[2023-08-11 08:54:22,744] werkzeug - INFO - 127.0.0.1 - - [11/Aug/2023 08:54:22] "[31m[1mPOST /predict HTTP/1.1[0m" 405 -
+[2023-08-11 09:04:09,999] werkzeug - INFO - 127.0.0.1 - - [11/Aug/2023 09:04:09] "[31m[1mPOST /predict HTTP/1.1[0m" 405 -
+[2023-08-11 09:05:30,763] werkzeug - INFO - 127.0.0.1 - - [11/Aug/2023 09:05:30] "[31m[1mPOST /predict HTTP/1.1[0m" 405 -
