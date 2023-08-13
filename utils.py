@@ -20,6 +20,8 @@ def main():
         # Display download link for each file
         file_path = os.path.join(directory_path, file)
         st.write(f"[{file}]({file_path})")
+        with open()
+        st.download_button("download", file_name=file)
     
 if __name__ == "__main__":
     main()
