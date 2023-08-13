@@ -101,7 +101,7 @@ Used for testing purposes. You can use pip install pytest and pip install tox
 ```dvc repro```
 ```dvc metrics show```
 
-Use logging libraries for making logs
+Use logging libraries to make logs
 
 ### Testing
 while testing your file names must contain the word "test" in it. For ex: xyztest.py or configtest.py
@@ -109,7 +109,7 @@ while testing your file names must contain the word "test" in it. For ex: xyztes
 After writing the code, run pytest -v and see all test cases done
 
 ### Web Deployment
-Html, Css is used for front-end<br>
+Streamlit is used to build a website<br>
 all the codes are given in app.py
 
 ## Contributions
