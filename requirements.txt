@@ -24,3 +24,4 @@ mlflow
 six
 # -e .
 streamlit
+streamlit_extras
