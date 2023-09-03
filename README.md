@@ -1,5 +1,6 @@
-# Consignment-Pricing-Prediction-Using-MLOps-DVC
 
+# <p align="center"> Consignment-Pricing-Prediction-Using-MLOps-DVC</p>
+![](https://github.com/praj2408/Consignment-Pricing-using-MLOps-DVC/blob/main/notebook/3554469_8b80_9.jpg)
 ## Project Overview
 The Consignment-Price Prediction project aims to develop a machine-learning model that can accurately predict the price of consignment items based on various features and variables. Consignment is a business model in which an individual or business agrees to sell someone else's items on their behalf, typically taking a commission on the final sale price.
 
